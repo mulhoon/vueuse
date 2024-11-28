@@ -5,13 +5,21 @@ import { ref } from 'vue'
 const translateX = ref(0)
 const translateY = ref(0)
 
-onKeyStroke(['w', 'W', 'ArrowUp'], (e) => {
+onKeyStroke(['ArrowUp'], (e) => {
   e.preventDefault()
   translateY.value -= 10
 })
 
-onKeyStroke(['s', 'S', 'ArrowDown'], (e) => {
+onKeyStroke(['ArrowDown'], (e) => {
   e.preventDefault()
+  translateY.value += 10
+})
+
+onKeyStroke(['w', 'W'], (e) => {
+  translateY.value -= 10
+})
+
+onKeyStroke(['s', 'S'], (e) => {
   translateY.value += 10
 })
 
