@@ -6,12 +6,10 @@ const translateX = ref(0)
 const translateY = ref(0)
 
 onKeyStroke(['w', 'W', 'ArrowUp'], (e) => {
-  e.preventDefault()
   translateY.value -= 10
 })
 
 onKeyStroke(['s', 'S', 'ArrowDown'], (e) => {
-  e.preventDefault()
   translateY.value += 10
 })
 
